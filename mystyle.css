@@ -1,0 +1,81 @@
+html, body, header, footer{
+    margin: 0;
+    font-size: calc(8px + 1.25vw);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.view-port{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+header{
+    background-color: black;
+    color: white;
+    padding: 1vh 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.item{
+    display: inline-block;
+    margin: auto;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: .75em;
+    padding: 1vh 0;
+}
+
+.boxes{
+    background-color: rgb(192, 192, 192);
+    border: 2px solid black;
+    position: relative;
+    top: 20vh;
+    min-height: 35vh;
+    width: 20vw;
+    margin: auto;
+    text-align: center;
+    border-radius: 2em;
+}
+
+.center-box{
+    width: 30%;
+    background-color: rgb(192, 192, 192);
+    border: 2px solid black;
+    text-align: center;
+    margin: 0;
+}
+
+#existingDriver, #existingRider{
+    position: relative;
+    top: 25vh;
+    width: 20vw;
+    padding: 1vh 0;
+    margin: auto;
+    text-align: center;
+    background-color: rgb(192, 192, 192);
+    border: 2px solid black;
+    display: none;
+}
+
+#runAuction{
+    position: absolute;
+    bottom: 2vh;
+    width: fit-content;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}

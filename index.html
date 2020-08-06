@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'react/mystyle.css' %}">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Twuber Auction Simulator</title>
+    </head>
+    <body>
+        <div class='view-port'>
+            <header>
+                <span style='color: rgb(71, 199, 238);'>Tw</span>uber Auction Simulator
+            </header>
+            <div class='container'>
+                <div class='item'>
+                    <div class='boxes' id='driver-create'>
+                        <h2>Drivers</h2>
+                        <p style='font-size: .5em;'>Create a New Driver</p>
+                        <form id='drivers'>
+                            <input type="text" name='name' placeholder='Name' autocomplete='off'><br>
+                            <input type="number" name='xLocation' placeholder='X-Coord'><br>
+                            <input type="number" name='yLocation' placeholder='Y-Coord'><br>
+                            <input type='number' name='costMile' placeholder='Cost per Mile'><br>
+                            <input type='number' name='costTime' placeholder='Value of Time'><br>
+                            <input type='button' value='Submit' id='addDriver'><br>
+                        </form>
+                        <button id='sampleDrivers' style='font-size: .5rem'>Sample Drivers</button>
+                    </div>
+                    <div id='existingDriver' style='font-size: .5em;'>
+                        <div>Available Drivers</div>
+                        <button id='clearDrivers' style='font-size:.5rem;'>Clear Drivers</button>
+                        <div id='existingDrivers'></div>
+                    </div>
+                </div>
+                <div class='item center-box' style='position: relative;'>
+                    <div>Auction Results</div>
+                    <div id='auctionResults' style='font-size: .75em; padding: .5vh .5vw'></div>
+                    <button id='runAuction'>Run Auction</button>
+
+                </div>
+                <div class='item'>
+                    <div class='boxes'>
+                        <h2>Riders</h2>
+                        <p style='font-size: .5em;'>Create a New Rider</p>
+                        <form id='riders'>
+                            <input type="text" name='name' placeholder= 'Name' autocomplete='off'><br>
+                            <input type="number" name='xLocation' placeholder='X-Coord'><br>
+                            <input type="number" name='yLocation' placeholder='Y-Coord'><br>
+                            <input type='number' name='lengthTrip' placeholder='Length of Trip'><br>
+                            <input type='number' name='timeTrip' placeholder='Trip Time'><br>
+                            <input type="submit" id='addRider'><br>
+                        </form>
+                        <button id='sampleRiders' style='font-size: .5rem'>Sample Riders</button>
+                    </div>
+                    <div id='existingRider' style='font-size: .5em;'>
+                        <div>Available Riders</div>
+                        <button id='clearRiders' style='font-size:.5rem;'>Clear Riders</button>
+                        <div id='existingRiders'></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <footer>
+            &copy; Gus Robinson 2020
+        </footer>
+        <script src="{% static 'react/app.js' %}"></script>
+    </body>
+</html>
