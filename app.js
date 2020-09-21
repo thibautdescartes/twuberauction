@@ -91,14 +91,6 @@ document.getElementById('runAuction').onclick = function () {
     //This is the Portion that needs to be repeated???
     
     var runAuction = function() {
-        for (bids in bidArray) {
-            if (bidArray[bids].bidChoice != "No Bid") {
-                bidNumber = bidArray[bids].bidChoice;
-                checkForMultipleDrivers.push(bidNumber);
-            }
-         }   
-        
-        checkForMultipleDrivers2 = new Set(checkForMultipleDrivers);
         
         if (a == buyers.length && checkForMultipleDrivers2.length == checkForMultipleDrivers.length) {
             console.log(currentPrices);
@@ -223,6 +215,16 @@ document.getElementById('runAuction').onclick = function () {
             delayedRoundCounter++;
             f++;
             console.log(a);
+            
+            for (bids in bidArray) {
+                if (bidArray[bids].bidChoice != "No Bid") {
+                    bidNumber = bidArray[bids].bidChoice;
+                    checkForMultipleDrivers.push(bidNumber);
+                }
+             }   
+
+            checkForMultipleDrivers2 = new Set(checkForMultipleDrivers);
+            
             runAuction();    
         }
     }
