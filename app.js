@@ -86,10 +86,21 @@ document.getElementById('runAuction').onclick = function () {
     fun = [];
     delayedRoundCounter = -1;
     f = 0;
+    checkForMultipleDrivers = [];
+    checkForMultipleDrivers2 = [];
     //This is the Portion that needs to be repeated???
     
     var runAuction = function() {
-        if (a == buyers.length) {
+        for (bids in bidArray) {
+            if (bidArray[bids].bidChoice != "No Bid") {
+                bidNumber = bidArray[bids].bidChoice;
+                checkForMultipleDrivers.push(bidNumber);
+            }
+         }   
+        
+        checkForMultipleDrivers2 = new Set(checkForMultipleDrivers);
+        
+        if (a == buyers.length && checkForMultipleDrivers2.length == checkForMultipleDrivers.length) {
             console.log(currentPrices);
         } else {
             a = 0;
