@@ -92,7 +92,7 @@ document.getElementById('runAuction').onclick = function () {
     
     var runAuction = function() {
         
-        if (a == buyers.length && checkForMultipleDrivers2.size == checkForMultipleDrivers.length) {
+        if (a == buyers.length) {
             console.log(currentPrices);
         } else {
             a = 0;
