@@ -265,9 +265,9 @@ var displayTripData = function () {
         counter = 0;
         for (i of bids) {
             if (bids[counter].length == 1) {
-                uberPrice = bids[ride];
-                riderName = buyers[ride].name;
-                completeRideInfo = `There are no drivers available at this time for ${riderName}. Their best option is to take an Uber for $${uberPrice}.`
+                uberPriceA = (buyer.uberPrice(buyers[counter].lengthTrip))
+                riderName = buyers[counter].name;
+                completeRideInfo = `There are no drivers available at this time for ${riderName}. Their best option is to take an Uber for $${uberPriceA}.`
                 auctionResults = document.getElementById('auctionResults');
                 rideResults = document.createElement('li');
                 auctionResults.insertAdjacentElement('beforeend', rideResults);
