@@ -261,9 +261,10 @@ var displayTripData = function () {
         rideResults.style.padding = '1vh';
         rideResults.style.textAlign = 'left';
     }
-    if (buyers.length > sellers.length) {   
-        for (ride in bids) {
-            if (bids[ride].length == 1) {
+    if (buyers.length > sellers.length) {
+        counter = 0;
+        for (i of bids) {
+            if (bids[counter].length == 1) {
                 uberPrice = bids[ride];
                 riderName = buyers[ride].name;
                 completeRideInfo = `There are no drivers available at this time for ${riderName}. Their best option is to take an Uber for $${uberPrice}.`
@@ -274,6 +275,7 @@ var displayTripData = function () {
                 rideResults.style.padding = '1vh';
                 rideResults.style.textAlign = 'left';
             }
+            counter++;
         }
     }
 }
